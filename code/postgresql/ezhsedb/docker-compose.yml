@@ -1,7 +1,7 @@
 services:
   web:
     build: .
-    command: python /code/manage.py runserver 0.0.0.0:8000
+    command: sh -c "pip install psycopg2-binary==2.8.5 && python /code/manage.py runserver 0.0.0.0:8000"
     volumes:
       - .:/code
     ports:
@@ -10,6 +10,6 @@ services:
       - db
   
   db:
-    image: postgres:11
+    image: postgres:17
     environment:
       - "POSTGRES_HOST_AUTH_METHOD=trust"
