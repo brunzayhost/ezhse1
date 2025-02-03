@@ -1,8 +1,13 @@
 from django.contrib import admin
-from django.urls import path
-from pages.views import HomePageView  # Import the view
+from django.urls import path, include
 
 urlpatterns = [
+    # Django admin
     path('admin/', admin.site.urls),
-    path('', HomePageView.as_view(), name='home'),  # Add this line
+    
+    # User manaherment
+    path('accounts/', include('django.contrib.auth.urls')), # new
+    
+    # Local apps
+    path('', include('pages.urls')), # new
 ]
