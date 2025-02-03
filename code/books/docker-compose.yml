@@ -9,6 +9,10 @@ services:
       - 8001:8000
     depends_on:
       - db
+
+    environment:
+      - DJANGO_SETTINGS_MODULE=books.settings
+
   db:
     image: postgres:17
     volumes:
