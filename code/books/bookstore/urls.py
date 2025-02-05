@@ -7,7 +7,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     
     # User management
-    path('accounts/logout/', auth_views.LogoutView.as_view(next_page='/'), name='logout'),
+    path('logout/', auth_views.LogoutView.as_view(next_page='home'), name='logout'),
     path('accounts/', include('django.contrib.auth.urls')),
     
     # Local apps
