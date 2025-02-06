@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pages',  # new
     'accounts',  # added accounts app
+    
+    # Third party apps
     'crispy_forms',  # added crispy forms
 ]
 
