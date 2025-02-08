@@ -10,7 +10,7 @@ WORKDIR /code
 
 # Install dependencies
 COPY Pipfile Pipfile.lock /code/
-RUN pip install pipenv && pipenv install --system
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy project
 COPY . /code/
