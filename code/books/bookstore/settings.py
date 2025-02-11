@@ -54,6 +54,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap5'  # new
 # django-allauth config
 LOGIN_REDIRECT_URL = "home"
 ACCOUNT_LOGOUT_REDIRECT = "home" # new
+ACCOUNT_SESSION_REMEMBER = True # new
 
 SITE_ID = 1
 AUTHENTICATION_BACKENDS = (
