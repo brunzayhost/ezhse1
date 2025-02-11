@@ -13,6 +13,7 @@ services:
     environment:
       # - DJANGO_SETTINGS_MODULE=bookstore.settings
       - DJANGO_SECRET_KEY=django-insecure-t6mpb#uas0vjx^3c^ri#qnw*8x7f@jy&bc^(c!6!ndv(0#&p%_
+      - "DJANGO_DEBUG=True"
 
   db:
     image: postgres:17
